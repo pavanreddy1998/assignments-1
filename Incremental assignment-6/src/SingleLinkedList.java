@@ -6,6 +6,7 @@ class Node<T>{
         this.data=data;
         this.next=null;
     }
+
     public String toString(){
         if(data==null){
             return "null";
@@ -13,48 +14,67 @@ class Node<T>{
         else return ""+data;
     }
 }
-class SList<T>{
-Node<T> head=new Node<T>(null);
-    SListIterator<T> iterator () {
-        return new SListIterator< T > (head);
-    }
-public String toString() {
-    if (head.next == null)
-        return "The list is Empty";
 
+
+class SList<T>{
+
+    Node<T> head=new Node<T>(null);
+        SListIterator<T> iterator () {
+            return new SListIterator< T > (head);
+        }
+
+
+    public String toString() {
+        if (head.next == null)
+            return "The list is Empty";
 
     SListIterator<T> it = iterator();
-    String str = "";
-    while (it.hasNext()) {
-        str = str + it.next() + "->";
+    String string = "";
+      while (it.hasNext()) {
+          string = string + it.next() + "->";
+      }
+    return string+"null";
     }
-    return str+"null";
-  }
+
 }
 
 class SListIterator<T>{
-    Node<T> cur;
-    Node<T> h;
+    Node<T> current;
+    Node<T> head;
     SListIterator(Node<T> head){
-        h=head;
-        cur=head;
+        this.head=head;
+        current=head;
     }
     public Node<T> next(){
-        cur=cur.next;
-        return cur;
+        current=current.next;
+        return current;
     }
+
+    /**
+     * This method returns true if there is another node after current node,else it returns false.
+     * @return
+     */
     public boolean hasNext(){
-        if(cur.next==null)
+        if(current.next==null)
             return false;
         else return true;
     }
+
+    /**
+     * This method inserts the newnode with data passed as parameter at the end of the linkedlist.
+     * @param data
+     */
     public void insert(T data){
-        cur.next=new Node<T>(data);
-        cur=cur.next;
+        current.next=new Node<T>(data);
+        current=current.next;
         System.out.println("Inserted "+data);
     }
+
+    /**
+     * This method removes the last node from the end of the linkedlist.
+     */
     public void remove(){
-        Node<T> temp=h;
+        Node<T> temp=head;
         if(temp.next==null) {
             System.out.println("The list is already empty");
             return;
@@ -62,7 +82,7 @@ class SListIterator<T>{
         while(temp.next.next!=null){
             temp=temp.next;
         }
-        cur=temp;
+        current=temp;
         System.out.println("removing "+temp.next.data);
         temp.next=null;
     }
@@ -72,22 +92,45 @@ public class SingleLinkedList {
    SList<Integer> list=new SList<Integer>();
    SListIterator it=list.iterator();
         System.out.println(list);       //printing list initally
-        it.insert(100);            //inserting 100
+        it.insert(100);                 //inserting 100
 
         System.out.println(list);       //printing after insertion 100
-        it.insert(101);            //inserting 101
+        it.insert(101);                 //inserting 101
 
         System.out.println(list);      //printing after insertion 101
-        it.insert(102);           //inserting 102
+        it.insert(102);                //inserting 102
 
         System.out.println(list);       //printing after insertion 102
         it.remove();                    //removing
 
         System.out.println(list);         //printing after removing
 
-       it.remove();;
-       it.remove();
-       it.remove();                     //trying to remove after empty
+         it.remove();;
+         it.remove();
+         it.remove();                     //trying to remove after empty
 
     }
 }
+
+
+
+
+
+
+/**
+Output
+
+The list is Empty
+Inserted 100
+100->null
+Inserted 101
+100->101->null
+Inserted 102
+100->101->102->null
+removing 102
+100->101->null
+removing 101
+removing 100
+The list is already empty
+
+*/
