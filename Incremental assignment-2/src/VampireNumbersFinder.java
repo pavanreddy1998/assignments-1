@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Vampire {
+public class VampireNumbersFinder {
     /**
      * countDigit returns the total number od digits in a given number.
      * @param n
@@ -35,8 +35,6 @@ public class Vampire {
          return Arrays.equals(numberArray,factorsArray);
 
      }
-
-
 
 
     public static void main(String arg[])
