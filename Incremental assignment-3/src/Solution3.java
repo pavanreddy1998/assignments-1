@@ -25,7 +25,7 @@ void salary();
 
 class Cabin{
     Cabin(){
-        System.out.println("cabin Number");
+        System.out.println("cabin Number allocated");
     }
 
 }
@@ -62,17 +62,20 @@ class Employee extends Cabin implements JobDetails{
 
     void fetchIdentityDetails(IdentityDetails employee){
         employee.name();
+        employee.id();
     }
 
     void fetchPersonalDetails(PerosonalDetails employee){
         employee.age();
+        employee.mobile();
     }
 
     void fetchAddressDetails(AddressDetails employee){
         employee.country();
+        employee.address();
     }
 
-    void fetchAddressDetails(JobDetails employee){
+    void fetchJobDetails(JobDetails employee){
         employee.salary();
     }
 }
@@ -85,7 +88,25 @@ public static void main (String arg[]){
     employee.fetchIdentityDetails(employee);
     employee.fetchPersonalDetails(employee);
     employee.fetchAddressDetails(employee);
-    employee.fetchAddressDetails(employee);
+    employee.fetchJobDetails(employee);
+}
 }
 
-}
+/**
+Output:
+
+cabin Number allocated
+
+name of employee
+Id of employee
+
+Age of Employee
+mobile number
+
+country of employee
+address details
+
+salary of employee
+
+
+*/

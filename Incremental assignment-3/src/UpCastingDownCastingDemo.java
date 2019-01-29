@@ -47,3 +47,21 @@ public class UpCastingDownCastingDemo {
     }
 
 }
+
+
+/**
+Output:
+
+Cycle constructor
+Unicycle constructor
+
+Cycle constructor
+Bicycle constructor
+
+Cycle constructor
+Tricycle constructor
+
+balancing Unicycle
+balancing bicycle
+
+*/

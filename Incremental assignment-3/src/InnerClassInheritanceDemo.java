@@ -25,3 +25,10 @@ public static void main(String arg[]){
     Outerclass2.Innerclass2 innerObject2=outerObject2.new Innerclass2(outerObject1);
 }
 }
+
+/**
+Output:
+In inner class1 with string:hello
+In inner class2
+
+*/

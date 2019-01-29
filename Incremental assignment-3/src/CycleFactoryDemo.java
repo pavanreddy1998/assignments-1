@@ -57,3 +57,12 @@ public class CycleFactoryDemo {
 
     }
 }
+
+/**
+Output:
+
+unicycle ready
+bicycle ready
+tricycle ready
+
+*/

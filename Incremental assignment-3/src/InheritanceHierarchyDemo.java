@@ -74,3 +74,29 @@ public class InheritanceHierarchyDemo {
         }
     }
 }
+
+/**
+Output:
+
+this is default constructor of Rodent
+This is  constructor of mouse
+
+this is default constructor of Rodent
+This is  constructor of Gerbil
+
+this is default constructor of Rodent
+This is  constructor of Hamster
+
+food of mouse is cheese
+color of mouse is black
+size of mouse may be 10cm
+
+food of gerbil is carrot
+color of gerbil is white
+size of gerbil may be 11cm
+
+food of hamster is vegetables
+color of hamster is brown
+size of hamster may be 5cm
+
+*/
