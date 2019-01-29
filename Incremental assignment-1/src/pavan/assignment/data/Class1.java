@@ -13,7 +13,7 @@ public class Class1 {
         //System.out.println(local1);
          //System.out.println(local2);
         /*local variables don't have default value,hence it is a compile time error.
-*/
+        */
     }
 
 
