@@ -6,7 +6,7 @@ class String_length_Exception extends Exception{}
 
 public class ErrorHandlingDemo {
   static final int MIN_USERNAME_LENGTH = 5;
-    static void method1(int number,String userName) throws Negative_Exception,Zero_Number_Exception,String_length_Exception {
+    static void checkUserInput(int number,String userName) throws Negative_Exception,Zero_Number_Exception,String_length_Exception {
       if(number<0){
        System.out.println("throwing negative exception");
        throw new Negative_Exception();
@@ -37,7 +37,7 @@ public class ErrorHandlingDemo {
         System.out.println("enter userName");
         userName=sc.nextLine();
         try{
-            method1(number,userName);
+            checkUserInput(number,userName);
         }
         catch (Negative_Exception | Zero_Number_Exception | String_length_Exception  n){
             System.out.println("exception caught");
@@ -93,7 +93,7 @@ public class ErrorHandlingDemo {
     throwing Null pointer exception
     finally block
     Exception in thread "main" java.lang.NullPointerException
-    	at ErrorHandlingDemo.method1(ErrorHandlingDemo.java:20)
+    	at ErrorHandlingDemo.checkUserInput(ErrorHandlingDemo.java:20)
     	at ErrorHandlingDemo.main(ErrorHandlingDemo.java:38)
 
 
