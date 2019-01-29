@@ -30,7 +30,7 @@ class Tricycle extends Cycle{
 
 }
 
-public class Solution2 {
+public class UpCastingDownCastingDemo {
     public static void main( String[] arg) {
         Unicycle uni = new Unicycle();
         Bicycle bi = new Bicycle();

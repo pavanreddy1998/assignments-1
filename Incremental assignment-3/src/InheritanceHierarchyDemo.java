@@ -6,12 +6,13 @@ abstract class Rodent{
         System.out.println("this is default constructor of Rodent");
     }
 }
+
+
 class Mouse extends Rodent{
-Mouse(){
-    System.out.println("This is  constructor of mouse");
+    Mouse(){
+        System.out.println("This is  constructor of mouse");
 
-}
-
+    }
 
     public void food(){
         System.out.println("food of mouse is cheese");
@@ -24,6 +25,8 @@ Mouse(){
         System.out.println("size of mouse may be 10cm");
     }
 }
+
+
 class Gerbil extends Rodent{
     Gerbil(){
         System.out.println("This is  constructor of Gerbil");
@@ -39,6 +42,7 @@ class Gerbil extends Rodent{
         System.out.println("size of gerbil may be 11cm");
     }
 }
+
 
 class Hamster extends Rodent {
     Hamster(){
@@ -56,8 +60,10 @@ class Hamster extends Rodent {
         System.out.println("size of hamster may be 5cm");
     }
 }
-public class Hierarchy {
-    public static void main( String[] ags ) {
+
+
+public class InheritanceHierarchyDemo {
+    public static void main( String[] args ) {
 
         Rodent rodentArray[] = {new Mouse(), new Gerbil(), new Hamster()};
         for( Rodent rodent : rodentArray) {

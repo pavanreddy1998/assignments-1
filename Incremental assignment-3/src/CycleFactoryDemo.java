@@ -49,7 +49,7 @@ class TricycleFactory{
     }
 }
 
-public class Solution4 {
+public class CycleFactoryDemo {
     public static void main(String arg[]){
         Cycle1 unicycle=UnicycleFactory.orderUnicycle();
         Cycle1 bicycle=BicycleFactory.orderBicycle();
