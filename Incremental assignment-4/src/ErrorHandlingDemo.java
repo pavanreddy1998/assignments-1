@@ -93,8 +93,8 @@ public class ErrorHandlingDemo {
     throwing Null pointer exception
     finally block
     Exception in thread "main" java.lang.NullPointerException
-    	at ErrorHandling.method1(ErrorHandling.java:20)
-    	at ErrorHandling.main(ErrorHandling.java:38)
+    	at ErrorHandlingDemo.method1(ErrorHandlingDemo.java:20)
+    	at ErrorHandlingDemo.main(ErrorHandlingDemo.java:38)
 
 
 
