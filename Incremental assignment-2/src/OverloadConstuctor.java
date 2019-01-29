@@ -11,6 +11,6 @@ public class OverloadConstuctor {
     }
     public static void main(String a[])
     {
-        OverloadConstuctor ob=new OverloadConstuctor();
+        OverloadConstuctor object=new OverloadConstuctor();
     }
 }
