@@ -1,9 +1,9 @@
-interface Cycle1{
+interface Cycle{
      void type();
 }
 
-class Unicycle1 implements Cycle1{
-    Unicycle1(){
+class Unicycle implements Cycle{
+    Unicycle(){
         System.out.println("unicycle ready");
     }
    public void type(){
@@ -12,8 +12,8 @@ class Unicycle1 implements Cycle1{
 }
 
 
-class Bicycle1 implements Cycle1{
-    Bicycle1(){
+class Bicycle implements Cycle{
+    Bicycle(){
         System.out.println("bicycle ready");
     }
     public void type(){
@@ -21,8 +21,8 @@ class Bicycle1 implements Cycle1{
     }
 }
 
-class Tricycle1 implements Cycle1{
-    Tricycle1(){
+class Tricycle implements Cycle{
+    Tricycle(){
         System.out.println("tricycle ready");
     }
     public void type(){
@@ -31,29 +31,29 @@ class Tricycle1 implements Cycle1{
 }
 
 class UnicycleFactory{
-    public static Unicycle1 orderUnicycle(){
-        return new Unicycle1();
+    public static Unicycle orderUnicycle(){
+        return new Unicycle();
     }
 }
 
 class BicycleFactory{
-    public static Bicycle1 orderBicycle(){
-        return new Bicycle1();
+    public static Bicycle orderBicycle(){
+        return new Bicycle();
     }
 }
 
 
 class TricycleFactory{
-    public static Tricycle1 orderTricycle(){
-        return new Tricycle1();
+    public static Tricycle orderTricycle(){
+        return new Tricycle();
     }
 }
 
 public class CycleFactoryDemo {
     public static void main(String arg[]){
-        Cycle1 unicycle=UnicycleFactory.orderUnicycle();
-        Cycle1 bicycle=BicycleFactory.orderBicycle();
-        Cycle1 tricycle=TricycleFactory.orderTricycle();
+        Cycle unicycle=UnicycleFactory.orderUnicycle();
+        Cycle bicycle=BicycleFactory.orderBicycle();
+        Cycle tricycle=TricycleFactory.orderTricycle();
 
     }
 }
