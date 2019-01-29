@@ -1,12 +1,13 @@
 package pavan.assignment.data;
 
-public class Class1 {
+  public class Class1 {
     int global1;
     char global2;
     public void printGlobal(){
         System.out.println(global1);
         System.out.println(global2);
     }
+
     public  static void printLocal() {
         int local1;
         char local2;

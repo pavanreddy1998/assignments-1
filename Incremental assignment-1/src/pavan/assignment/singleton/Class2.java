@@ -8,6 +8,7 @@ public class Class2 {
         objectOfClass2.name=name;
         return objectOfClass2;
     }
+    
     public void printName(){
         System.out.println(name);
     }
