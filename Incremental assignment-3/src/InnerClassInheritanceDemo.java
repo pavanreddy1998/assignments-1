@@ -1,8 +1,8 @@
 
 class Outerclass1{
     class Innerclass1{
-        Innerclass1(String stringParameter){
-            System.out.println("In inner class1 with string:"+stringParameter);
+        Innerclass1(String parameter){
+            System.out.println("In inner class1 with string:"+parameter);
         }
     }
 }

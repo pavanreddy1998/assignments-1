@@ -16,21 +16,21 @@ public class VampireNumbersFinder {
     /**
      * isVampire function checks if the given number isvampire based on the factors passed.
      * @param number
-     * @param factor1
-     * @param factor2
+     * @param firstFactor
+     * @param secondFactor
      * @return
      */
-     static boolean isVamp(long number,long factor1,long factor2){
+     static boolean isVamp(long number,long firstFactor,long secondFactor){
        //if factors are ending with zero then it cannot be vampire number.
-       if(factor1%10==0 && factor2%10==0)
+       if(firstFactor%10==0 && secondFactor%10==0)
           return false;
 
         //the fators should be two equal halves of the number
-       if(countDigit(factor1)!=countDigit(factor2)||countDigit(factor1)!=countDigit(number)/2)
+       if(countDigit(firstFactor)!=countDigit(secondFactor)||countDigit(firstFactor)!=countDigit(number)/2)
            return false;
 
        char numberArray[]=Long.toString(number).toCharArray();
-       char factorsArray[]=(""+factor1+factor2).toCharArray();
+       char factorsArray[]=(""+firstFactor+secondFactor).toCharArray();
          Arrays.sort(numberArray);
          Arrays.sort(factorsArray);
          return Arrays.equals(numberArray,factorsArray);
@@ -49,10 +49,10 @@ public class VampireNumbersFinder {
                 number=number*10-1;
                 continue;
                }
-               for(long factor1=2;factor1<=Math.sqrt(number)+1;factor1++){
-                   if(number%factor1==0){
-                       long factor2=number/factor1;
-                       if(isVamp(number,factor1,factor2)){
+               for(long firstFactor=2;firstFactor<=Math.sqrt(number)+1;firstFactor++){
+                   if(number%firstFactor==0){
+                       long secondFactor=number/firstFactor;
+                       if(isVamp(number,firstFactor,secondFactor)){
                            vampireList.add(number);
                        }
                    }

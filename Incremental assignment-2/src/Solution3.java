@@ -1,6 +1,6 @@
 public class Solution3 {
-    Solution3(String stringParameter){
-        System.out.println(stringParameter);
+    Solution3(String parameter){
+        System.out.println(parameter);
     }
 
     public static void main(String arg[])
