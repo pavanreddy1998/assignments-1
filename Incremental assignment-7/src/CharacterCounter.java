@@ -5,7 +5,7 @@ import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InputOutput {
+public class CharacterCounter {
     public static void main(String[] arg)throws Exception {
         try {
             File file = new File("./" + arg[0]);     //taking file name from argument
@@ -33,7 +33,7 @@ public class InputOutput {
             }
         }
         catch (Exception E){
-            System.out.println("Error occured ,Exception"+E);
+            System.out.println("Please pass the correct filename as an argument to the program");
         }
     }
 
@@ -42,5 +42,16 @@ public class InputOutput {
 
 /**
 
-Input and output files are present in the same directory.
+  
+1. Input and output files are present in the same directory.
+
+
+2.If trying to execute the program with no arguments
+      Please pass the correct filename as an argument to the program
+
+
+3. if file does not exist
+      Please pass the correct filename as an argument to the program
+
+
 */
