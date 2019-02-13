@@ -23,7 +23,7 @@ public class SimpleRegexChecker {
     1.Pavan                      String not matched with pattern
     2.Pavan.                     String matched pattern
     3.my name is pavan reddy.    String not matched with pattern
-    4.My name is pavan reddy.     String matched pattern
+    4.My name is pavan reddy.    String matched pattern
     5.heLLo WELCOME.             String not matched with pattern
     6.                           String not matched with pattern
     7.324234                     String not matched with pattern
