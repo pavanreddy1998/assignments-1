@@ -5,11 +5,12 @@ import java.util.regex.Pattern;
 
 public class SimpleRegexChecker {
     public static void main(String arg[]){
+        final String sentencePattern="^[A-Z].*\\.$";
         String inputString;
         System.out.println("enter string");
         Scanner s = new Scanner(System.in);
         inputString=s.nextLine();
-        if(Pattern.matches("^[A-Z].*\\.$",inputString))
+        if(Pattern.matches(sentencePattern,inputString))
         System.out.println("String matched pattern");
         else System.out.println("String not matched with pattern");
     }
