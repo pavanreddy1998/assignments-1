@@ -1,21 +1,30 @@
 
-
 import java.util.Scanner;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 public class SimpleRegexChecker {
-    public static void main(String arg[]){
-        final String sentencePattern="^[A-Z].*\\.$";
+
+    static final Logger LOGGER = Logger.getLogger(SimpleRegexChecker.class.getName());
+
+    public static void main(String[] arg) {
+
         String inputString;
-        System.out.println("enter string");
+        LOGGER.info("Enter string");
         Scanner s = new Scanner(System.in);
-        inputString=s.nextLine();
-        if(Pattern.matches(sentencePattern,inputString))
-        System.out.println("String matched pattern");
-        else System.out.println("String not matched with pattern");
+        inputString = s.nextLine();
+        if (isValidSentence(inputString)) {
+            LOGGER.info("String matched pattern");
+        } else {
+            LOGGER.info("String not matched with pattern");
+        }
+    }
+
+    static boolean isValidSentence(String sentence) {
+        final String sentencePattern = "^[A-Z].*\\.$";
+        return Pattern.matches(sentencePattern, sentence);
     }
 }
-
 
 
 /**
