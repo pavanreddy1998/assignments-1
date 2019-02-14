@@ -24,6 +24,12 @@ class SListIterator<T> {
         current = head;
     }
 
+    /**
+     * This method changes the current to next node and returns it.
+     *
+     * @return
+     */
+
     public Node<T> next() {
         current = current.next;
         return current;
@@ -97,13 +103,13 @@ public class SingleLinkedList {
         SList<Integer> list = new SList<Integer>();
         SListIterator it = list.iterator();
         System.out.println(list);       //printing list initally
-        it.insert(100);            //inserting 100
+        it.insert(100);                //inserting 100
 
         System.out.println(list);       //printing after insertion 100
-        it.insert(101);            //inserting 101
+        it.insert(101);                //inserting 101
 
         System.out.println(list);      //printing after insertion 101
-        it.insert(102);           //inserting 102
+        it.insert(102);                //inserting 102
 
         System.out.println(list);       //printing after insertion 102
         it.remove();                    //removing
@@ -116,8 +122,6 @@ public class SingleLinkedList {
 
     }
 }
-
-
 
 
 
