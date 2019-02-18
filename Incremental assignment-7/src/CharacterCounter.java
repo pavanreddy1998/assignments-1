@@ -6,9 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CharacterCounter {
-    public static void main(String[] arg)throws Exception {
+    public static void main(String[] arg) throws Exception {
+
+        final String inputFilePath = "./" + arg[0];    //taking file name from argument
+        final String outputFilePath = "./out.txt";
         try {
-            File file = new File("./" + arg[0]);     //taking file name from argument
+            File file = new File(inputFilePath);
 
             BufferedReader buffer = new BufferedReader(new FileReader(file));
 
@@ -26,13 +29,12 @@ public class CharacterCounter {
                     }
                 }
             }
-            PrintStream fileOut = new PrintStream("./out.txt");
+            PrintStream fileOut = new PrintStream(outputFilePath);
             System.setOut(fileOut);
             for (Map.Entry entry : hashmap.entrySet()) {
                 System.out.println("" + entry.getKey() + " " + entry.getValue());
             }
-        }
-        catch (Exception E){
+        } catch (Exception E) {
             System.out.println("Please pass the correct filename as an argument to the program");
         }
     }
